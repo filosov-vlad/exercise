@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Пример дизайна</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+            }
+
+            .header, .footer {
+                background-color: #999999;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                color: #ffffff;
+            }
+
+            .header {
+                width: 100%;
+            }
+
+            .footer {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+
+            .left, .right {
+                background-color: #999999;
+                height: calc(100% - 104px);
+                width: 15%;
+                position: fixed;
+                text-align: center;
+                color: #ffffff;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .left {
+                left: 0;
+                top: 52px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .right {
+                right: 0;
+                top: 52px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .content {
+                margin-left: 15%;
+                margin-right: 15%;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .box {
+                background-color: #ffffff;
+                border: 1px solid #999999;
+                width: 150px;
+                height: 100px;
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                overflow: hidden; /* добавляем скрытие содержимого, которое не влезает */
+                text-overflow: ellipsis; /* добавляем троеточие при обрезке заголовка */
+                white-space: nowrap;
+            }
+
+            .title {
+                text-align: center;
+                font-size: 24px;
+                margin-top: 10px;
+            }
+
+            @media screen and (max-width: 800px) {
+                .left, .right {
+                    display: none;
+                }
+
+                .content {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                .box {
+                    width: calc(33.33% - 20px); /* изменяем ширину блоков на 33.33% с отступами между ними */
+                    height: 150px; /* увеличиваем высоту блоков для более крупных заголовков */
+                }
+
+                .title {
+                    font-size: 18px;
+                }
+            }
+
+            .box{
+                background-color: #999999;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            @media screen and (max-width: 400px) {
+                .box {
+                    display: none;
+                }
+
+                .title {
+                    display: none;
+                }
+
+                .content::after {
+                    content: "...";
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 24px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">Header</div>
+        <div class="left">Left side</div>
+        <div class="right">Right side</div>
+        <div class="content">
+            <!— рендерим плашки из массива заголовков, полученных с сервера —>
+            <!— по умолчанию выводим 9 заголовков —>
+            <div class="box">Title 1</div>
+            <div class="box">Title 2</div>
+            <div class="box">Title 3</div>
+            <div class="box">Title 4</div>
+            <div class="box">Title 5</div>
+            <div class="box">Title 6</div>
+            <div class="box">Title 7</div>
+            <div class="box">Title 8</div>
+            <div class="box">Title 9</div>
+            <div class="box">Title 10</div>
+            <div class="box">Title 11</div>
+            <div class="box">Title 12</div>
+            <div class="box">Title 13</div>
+            <div class="box">Title 14</div>
+            <div class="box">Title 15</div>
+            <div class="box">Title 16</div>
+            <div class="box">Title 17</div>
+            <div class="box">Title 18</div>
+            <div class="box">Title 19</div>
+            <div class="box">Title 20</div>
+            <div class="box">Title 21</div>
+            <div class="box">Title 22</div>
+            <div class="box">Title 23</div>
+            <div class="box">Title 24</div>
+            <div class="box">Title 25</div>
+            <div class="box">Title 26</div>
+            <div class="box">Title 27</div>
+            <div class="box">Title 28</div>
+            <div class="box">Title 29</div>
+            <div class="box">Title 30</div>
+            <div class="box">Title 31</div>
+            <div class="box">Title 32</div>
+            <div class="box">Title 33</div>
+            <div class="box">Title 34</div>
+            <div class="box">Title 35</div>
+            <div class="box">Title 36</div>
+            <div class="box">Title 37</div>
+            <div class="box">Title 38</div>
+            <div class="box">Title 39</div>
+            <div class="box">Title 40</div>
+            <div class="box">Title 41</div>
+            <div class="box">Title 42</div>
+            <div class="box">Title 43</div>
+            <div class="box">Title 44</div>
+            <div class="box">Title 45</div>
+            <div class="box">Title 46</div>
+            <div class="box">Title 47</div>
+            <div class="box">Title 48</div>
+            <div class="box">Title 49</div>
+        </div>
+        <div class="footer">Footer</div>
+        <script src="script.js"></script>
+    </body>
+</html>
